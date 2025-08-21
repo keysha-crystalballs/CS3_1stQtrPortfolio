@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted by Keisha Cristobal of 9 - Lithium </h2>
+   <h3> Will you be able to guess the number? ( •̀ - • )</h3>
+   <p>
+    Guess the number: ****
+   </p>
+   <p>
+    The number is from 1-100
+   </p>
+    <label> Enter your guess:
+    <input id = "guess" /> 
+    </label></br>
+    <button onclick ="checkIt()">
+        Check it !
+    </button>
+    <div id = "result" ></div>
+
+    <script>
+
+    var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+
+
+        function checkIt() {
+            
+            var guess = Number(document.getElementById("guess").value);
+
+            if(guess < dNumber){
+                document.getElementById("result").innerHTML = "Result: Higher";
+            }
+            else if(guess > dNumber){
+                document.getElementById("result").innerHTML = "Result: Lower";
+            }
+            else{
+                document.getElementById("result").innerHTML = "That's correct! Good job :3";
+            }    
+         // Cristobal, K. (2025). Q1 2nd Graded Exercise (Tip) on I/O Statements and Number Objects. Philippine Science High School (MC).
+        }
+    </script>
+
+</body>
+
+</html>
